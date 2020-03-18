@@ -1,0 +1,46 @@
+@import "node_modules/normalize.scss/normalize";
+
+$screen-sm-max: 576px;
+
+$screen-md-max: 768px;
+
+$screen-lg-min: 992px;
+
+$screen-xl-max: 1200px;
+
+@mixin sm {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$screen-xl-max}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$screen-xl-max}) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
